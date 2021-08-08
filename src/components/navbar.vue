@@ -2,7 +2,7 @@
   <nav class="navbar navbar-dark navbar-expand-sm sticky-top">
     <div class="container collapse navbar-collapse">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item"><a class="nav-link" v-for= "list in navbarList" :key="list.id" :href="list.url" >{{list.title}}</a></li>
+        <li class="nav-item"><router-link class="nav-link" v-for= "list in navbarList" :key="list.id" :to="list.url" >{{list.title}}</router-link></li>
       </ul>
       <span class="navbar-text" >
         <a role="button" v-for= "user in userButton" :key="user.id"  >
@@ -22,17 +22,17 @@ export default {
           {
               id: "homeId",
               title: "Home",
-              url: "#home"
+              url: "/"
           },
           {
-              id: "taxListId",
-              title: "Tax List",
-              url: "#taxlist"
+              id: "userListId",
+              title: "User List",
+              url: "/userlist"
           },
           {
               id: "aboutUsId",
               title: "About Us",
-              url: "#aboutus"
+              url: "/about"
           },
       ],
       userButton:[

@@ -9,13 +9,15 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.11.5",
+    "axios": "^0.21.1",
     "bootstrap": "^4.5.2",
     "bootstrap-vue": "^2.21.2",
     "core-js": "^3.6.5",
     "mutationobserver-shim": "^0.3.7",
     "popper.js": "^1.16.1",
     "portal-vue": "^2.1.7",
-    "vue": "^3.1.5"
+    "vue": "^3.1.5",
+    "vue-router": "^4.0.10"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",

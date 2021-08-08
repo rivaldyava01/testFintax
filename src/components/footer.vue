@@ -1,7 +1,7 @@
 <template>
  <div>
- <div class="footer">
- <p>This is a demo footer. (c) 2018-19</p>
+ <div class="footer sticky-bottom">
+ <p>Copyright (c) 2021 SitePoint</p>
  </div>
  </div>
 </template>
