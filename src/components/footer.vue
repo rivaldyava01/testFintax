@@ -1,11 +1,11 @@
 <template>
  <div>
- <div class="footer sticky-bottom">
- <p>Copyright (c) 2021 SitePoint</p>
- </div>
+ <footer>
+ <p>Copyright (c) 2021</p>
+ </footer>
  </div>
 </template>
-
+5
 <script>
 export default {
  name: 'Footer',
@@ -15,11 +15,10 @@ export default {
 </script>
 
 <style scoped>
-.footer {
- position: fixed;
- left: 0;
- bottom: 0;
+footer {
+margin-top:auto; 
  width: 100%;
+ height: 100%;
  background-color: #333;
  color: white;
  text-align: center;

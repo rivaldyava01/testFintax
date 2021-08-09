@@ -1,9 +1,7 @@
 import { createWebHistory, createRouter } from "vue-router";
 import homeContent from "../components/homeContent.vue";
-// import Navbar from "../components/navbar.vue";
-// import footer from "../components/footer.vue";
 import notFound from "../components/notFound.vue";
-import table from "../components/table.vue";
+import userTable from "../components/userContent.vue";
 
 const routes = [
   {
@@ -24,7 +22,7 @@ const routes = [
   {
     path: "/userlist",
     name: "User List",
-    component: table
+    component: userTable,
   }
 ];
 

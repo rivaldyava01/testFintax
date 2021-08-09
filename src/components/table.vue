@@ -1,46 +1,55 @@
 <template>
-    <table id="userData" class="table table-striped table-bordered table-sm">
+    <table id="userList" class="table table-striped table-bordered table-sm">
     <thead>
         <tr>
-        <th scope="col" @click="sortTable(0)">id</th>
-        <th scope="col" @click="sortTable(1)">Name</th>
-        <th scope="col" @click="sortTable(2)">Salary</th>
-        <th scope="col" @click="sortTable(3)">Age</th>
+        <th @click="sortTable(0)">Id</th>
+        <th @click="sortTable(1)">First Name</th>
+        <th @click="sortTable(2)">Last name</th>
+        <th @click="sortTable(3)">Email</th>
         </tr>
     </thead>
-    <tbody>
-        <tr>
-        <td>1</td>
-        <td>Mark</td>
-        <td>$ 19000</td>
-        <td>20</td>
-        </tr>
-        <tr>
-        <td>2</td>
-        <td>Jacob</td>
-        <td>$ 40000</td>
-        <td>23</td>
-        </tr>
-        <tr>
-        <td>3</td>
-        <td>Larry the Bird</td>
-        <td>$ 500000</td>
-        <td>50</td>
-        </tr>
+    <tbody id="userData">
+        
     </tbody>
 </table>
 </template>
 
 <script>
+
+import axios from 'axios'
+import $ from 'jquery'
+
 export default {
- name: 'table',
+ name: 'userTable',
  props: {
      
+ },
+ setup(){
+      axios
+        .get('https://reqres.in/api/users')
+        .then(function(response){
+            const taxData = response.data.data;
+            $("#userData").html('');
+            taxData.forEach(function (data){
+                 const optFormat =
+                `
+                <tr>
+                    <td>${data.id}</td>
+                    <td>${data.first_name}</td>
+                    <td>${data.last_name}</td>
+                    <td>${data.email}</td>
+                </tr>
+                `;
+                $("#userData").append(optFormat);
+
+            })
+        })
+    // };
  },
  methods: {
     sortTable:function(n){
         var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
-        table = document.getElementById("userData");
+        table = document.getElementById("userList");
         switching = true;
 
         dir = "asc"; 
@@ -79,30 +88,15 @@ export default {
                 }
             }
         }
-    }
+    },
+   
+
  },
  
 }
 
-// Jquery(document).ready(function () {
-// $('#dtBasicExample').DataTable();
-// $('.dataTables_length').addClass('bs-select');
-// });
-
-
 </script>
 
 <style scoped>
-table.dataTable thead .sorting:after,
-table.dataTable thead .sorting:before,
-table.dataTable thead .sorting_asc:after,
-table.dataTable thead .sorting_asc:before,
-table.dataTable thead .sorting_asc_disabled:after,
-table.dataTable thead .sorting_asc_disabled:before,
-table.dataTable thead .sorting_desc:after,
-table.dataTable thead .sorting_desc:before,
-table.dataTable thead .sorting_desc_disabled:after,
-table.dataTable thead .sorting_desc_disabled:before {
-bottom: .5em;
-}
+
 </style>

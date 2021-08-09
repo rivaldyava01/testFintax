@@ -1,23 +1,28 @@
 <template>
-
-  <welcome></welcome>
-  <product></product>
-    
+    <header class="jumbotron"> 
+        <div class="container row row-header">
+            <div class="col-12 col-sm-6">
+                <h1>Say "Goodbye" to the hassle of taking care of taxese</h1>
+                <h2>Start Your Freedom, from here</h2>
+            </div>
+            <div class="col-12 col-sm-6 align-self-center">
+                <a class="btn btn-block btn-warning btn-sm" role="button" id="offerBtn">Enjoy Your Life</a>
+            </div>
+        </div>
+    </header>
 </template>
 
 <script>
-import welcome from './welcome.vue'
-import product from './product.vue'
-  export default {
-  name: 'homeContent',
-  components: {
-      welcome,product
+export default {
+  name: 'welcome',
+  props: {
+
   }
 }
 </script>
 
 <style scoped>
-  .h1{
+.h1{
   text-align: center;
   position: absolute;
   top: 50%;
@@ -69,4 +74,5 @@ a {
 button:hover, a:hover {
  opacity: 0.7;
 }
+
 </style>
