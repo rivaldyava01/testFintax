@@ -11,9 +11,10 @@
 <script>
 import userTable from './table.vue'
   export default {
-  name: 'userContent',
-  components: {
-      userTable
+    title: 'User List',
+    name: 'userContent',
+    components: {
+        userTable
   }
 }
 </script>

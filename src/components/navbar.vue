@@ -27,7 +27,7 @@ export default {
           {
               id: "userListId",
               title: "User List",
-              url: "/userlist"
+              url: "/userlist/1"
           },
           {
               id: "mathTaxId",

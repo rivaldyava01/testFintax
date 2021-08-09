@@ -8,7 +8,8 @@ const routes = [
   {
     path: "/",
     name: "home",
-    component: homeContent
+    component: homeContent,
+    
   },
   {
     path: "/about",
@@ -21,7 +22,7 @@ const routes = [
     component: notFound,
   },
   {
-    path: "/userlist",
+    path: "/userlist/:id",
     name: "User List",
     component: userTable,
   },
