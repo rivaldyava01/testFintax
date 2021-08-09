@@ -30,9 +30,9 @@ export default {
               url: "/userlist"
           },
           {
-              id: "aboutUsId",
-              title: "About Us",
-              url: "/about"
+              id: "mathTaxId",
+              title: "Math Tax",
+              url: "/mathtax"
           },
       ],
       userButton:[

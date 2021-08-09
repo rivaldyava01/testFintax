@@ -2,6 +2,7 @@ import { createWebHistory, createRouter } from "vue-router";
 import homeContent from "../components/homeContent.vue";
 import notFound from "../components/notFound.vue";
 import userTable from "../components/userContent.vue";
+import mathTax from "../components/mathTax.vue";
 
 const routes = [
   {
@@ -23,6 +24,11 @@ const routes = [
     path: "/userlist",
     name: "User List",
     component: userTable,
+  },
+  {
+    path: "/mathtax",
+    name: " Math Tax",
+    component: mathTax,
   }
 ];
 

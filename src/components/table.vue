@@ -48,7 +48,7 @@ export default {
  },
  methods: {
     sortTable:function(n){
-        var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+        let table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
         table = document.getElementById("userList");
         switching = true;
 
