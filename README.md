@@ -1,4 +1,4 @@
-# belajar-project
+# testFintaxnpm
 
 ## Project setup
 ```
